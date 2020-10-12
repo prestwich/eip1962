@@ -27,14 +27,14 @@ serde_json = {version = "1.0", optional = true }
 once_cell = {version = "1.*", optional = true }
 num-bigint = {version = "0.2", optional = true }
 num-traits = {version = "0.2", optional = true }
+rand = { version = "0.7", optional = true }
+rand_xorshift = { version = "0.2", optional = true }
 
 [dev-dependencies]
 num-bigint = "0.2"
 num-traits = "0.2"
 num-integer = "0.1"
 hex = "0.4"
-rand = "0.7"
-rand_xorshift = "0.2"
 csv = "1"
 pbr = "*"
 serde = { version = "1.0", features = ["derive"] }
@@ -61,6 +61,8 @@ eip_2539 = []
 eip_2539_c_api = ["eip_2539"]
 eip_196 = ["once_cell", "num-bigint", "num-traits"]
 eip_196_c_api = ["eip_196"]
+
+randgen = ["rand", "rand_xorshift"]
 
 [profile.release]
 incremental = false
